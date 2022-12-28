@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import Leftbar from "./Components/Leftbar/Leftbar";
+import Student from "./Pages/Student/Student";
+import Teacher from "./Pages/Teacher/Teacher";
 
 function App() {
+  const Layout = () => {
+    return (
+      <div className="theme-dark" style={{ background: "#F0F1F3" }}>
+        <Navbar />
+        <div style={{ display: "flex" }}>
+          <Leftbar />
+
+          <Outlet />
+        </div>
+      </div>
+    );
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Student />,
+        },
+        {
+          path: "/teacher",
+          element: <Teacher />,
+        },
+      ],
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }

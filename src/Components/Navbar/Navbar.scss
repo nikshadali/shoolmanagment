@@ -1,0 +1,131 @@
+.nav{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-shadow:  0px 1px 10px 0px rgb(0 0 0 / 10%);
+    background: #fff;
+   
+    .left{
+        flex: 1;
+        padding: 20px 20px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        background:#FFA101 ;
+        align-items: center;
+        height: 80px;
+        box-shadow:  0px 1px 10px 0px rgb(0 0 0 / 10%);
+       .sidebtn{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+       
+        cursor: pointer;
+        gap: 5px;
+        span{
+            width:25px;
+            height: 2px;
+            background: #fff;
+            
+           
+           
+
+       }
+      .centerbtn{
+        width: 20px;
+      
+      }
+           
+    
+        }
+    }
+    .center{
+        flex: 6;
+        display: flex;
+        justify-content: flex-start;
+       
+        height: 80px;
+        align-items: center;
+        padding: 0 30px;
+        .search{
+            color: #d3d3d3;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+        input{
+            height: 35px;
+            background: transparent;
+             width: 200px;
+             border: none;
+             outline: none;
+             color: #dbd9d9;
+             font-size: 16px;
+             font-weight: bold;
+             margin-left: 10px;
+           
+        }
+    }
+    .right{
+        flex: 2;
+        .user{
+            display: flex;
+            align-items: center;
+           
+            span{
+                padding: 0 15px;
+            }
+            img{
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+            .icons{
+                position: relative;
+            }
+            .email{
+                margin-left: 20px;
+                color: #d3d3d3;
+                
+               
+            }
+            .notification{
+                margin-left: 30px;
+                color: #d3d3d3;
+            }
+          .emailinfo{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: green;
+            position: absolute;
+            top: -10px;
+            left: 38px;
+            border: 2px solid #fff;
+            box-shadow:   0px 8px 10px 0px rgb(0 0 0 / 25%);
+            color: #fff;
+            text-align: center;
+            font-weight: 500;
+            
+          }
+          .notiinfo{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            top:-10px;
+            left: 90px;
+            border: 2px solid #fff;
+            box-shadow:   0px 8px 10px 0px rgb(0 0 0 / 25%);
+            color: #fff;
+            text-align: center;
+            font-weight: 500;
+
+          }
+        }
+       
+    }
+    
+}
